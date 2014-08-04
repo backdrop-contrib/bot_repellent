@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Manage the install, update, and uninstallation for Bot repellent.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function bot_repellent_uninstall() {
+  variable_del('bot_repellent_tags');
+}

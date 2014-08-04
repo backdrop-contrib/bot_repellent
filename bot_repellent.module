@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Impelements hook_menu().
+ */
+function bot_repellent_menu() {
+  $items = array();
+
+  $items['admin/config/search/bot_repellent'] = array(
+    'title' => 'Bot repellent',
+    'description' => 'Set site-wide, global values for X-Robots-Tag HTTP headers.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bot_repellent_admin_settings'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'bot_repellent.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implements book_boot().
+ */
+function bot_repellent_boot() {
+  $robot_tags = variable_get('bot_repellent_tags', array());
+  foreach ($robot_tags as $key => $value) {
+    if (!empty($value)) {
+      $tag_keys[] = $key;
+    }
+  }
+  $tag_string = implode($tag_keys, ', ');
+  drupal_add_http_header('X-Robots-Tag', $tag_string);
+}

@@ -1,0 +1,4 @@
+name = Bot repellent
+description = Implementation of the X-Robots-Tag HTTP header for global crawling rules.
+core = 7.x
+configure = admin/config/search/bot_repellent
