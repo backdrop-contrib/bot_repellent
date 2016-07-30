@@ -2,8 +2,8 @@ Bot repellent
 =============
 
 Supplement or alternative to the
-[Base Meta Tags](https://backdropcms.org/project/base_meta) module that adds the
-X-Robots-Tag HTTP header globally based on options listed in the Google
+[Base Meta Tags](https://backdropcms.org/project/base_meta) Backdrop module that
+adds the X-Robots-Tag HTTP header globally based on options listed in the Google
 Webmasters documentation on Robots meta tag and X-Robots-Tag HTTP header
 specifications.
 
