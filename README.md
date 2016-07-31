@@ -1,15 +1,13 @@
 Bot repellent
 =============
 
-Supplement or alternative to the
-[Base Meta Tags](https://backdropcms.org/project/base_meta) Backdrop module that
-adds the X-Robots-Tag HTTP header globally based on options listed in the Google
-Webmasters documentation on Robots meta tag and X-Robots-Tag HTTP header
-specifications.
+Add the X-Robots-Tag HTTP header to instruct search index bots on permissible activity.
 
-Whereas the meta tag module inserts flags for robots in the website HTML output,
-this adds robot tags to the HTTP connection handshake. This is only useful
-for global rules since that's all I cared to implement. Tags implemented are:
+Based on options listed in the Google Webmasters documentation on [Robots meta tag and X-Robots-Tag HTTP header specifications](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1).
+
+Meta tags insert flags for robots in the website HTML output, however this adds robot tags to the HTTP connection handshake. This is only useful for global rules since that's all I cared to implement.
+
+Supported flags are:
 
 * all
 * noindex
