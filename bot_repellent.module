@@ -6,6 +6,18 @@
  */
 
 /**
+ * Implements hook_config_info();
+ */
+function bot_repellent_config_info() {
+  $prefixes = array();
+  $prefixes['bot_repellent.settings'] = array(
+    'group' => t('Configuration'),
+    'label' => t('Bot repellent settings'),
+  );
+  return $prefixes;
+}
+
+/**
  * Implements hook_perm().
  */
 function bot_repellent_permission() {
