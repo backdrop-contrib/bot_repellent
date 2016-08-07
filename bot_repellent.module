@@ -54,7 +54,9 @@ function bot_repellent_menu() {
  * Implements hook_boot().
  */
 function bot_repellent_boot() {
+  $tag_keys = array();
   $robot_tags = config_get('bot_repellent.settings', 'tags');
+
   foreach ($robot_tags as $key => $value) {
     if (!empty($value)) {
       $tag_keys[] = $key;
